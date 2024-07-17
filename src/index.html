@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas 示例</title>
+</head>
+
+<body>
+  <canvas id="myCanvas" width="400" height="400"></canvas>
+  <script>
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+
+    // 绘制一个红色的矩形 
+    ctx.fillStyle ='red';
+    ctx.fillRect(50, 50, 100, 100);
+
+    // 绘制一条蓝色的线
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.lineTo(400, 400);
+    ctx.strokeStyle = 'blue';
+    ctx.stroke();
+
+    // 绘制一个绿色的圆形
+    ctx.beginPath();
+    ctx.arc(200, 200, 50, 0, 2 * Math.PI);
+    ctx.fillStyle = 'green';
+    ctx.fill();
+  </script>
+</body>
+
+</html>
