@@ -5,7 +5,6 @@ import { lazy } from "react";
 
 
 
-
 const router=[
     {
         path:'/',
@@ -18,6 +17,10 @@ const router=[
     {
         path:'/login',
         element:lazy(()=>import('../page/Login/Index'))
+    },
+    {
+        path:"/design",
+         element:lazy(()=>import('../page/Design/index'))
     },
     {
         path:'*',
